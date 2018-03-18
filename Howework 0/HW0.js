@@ -166,4 +166,3 @@
 	console.log('outputTask3 = ' + objectQueryStr({name1: 'John', name2: 'Fedor'}));
 	console.log('outputTask4 : '); console.log(ChoosePeople(arrayPeople));
 	console.log('outputTask5 = ' + getIn(person, ['address', 'street'], 'Бомж'));
-	
