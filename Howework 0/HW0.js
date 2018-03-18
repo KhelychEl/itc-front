@@ -93,7 +93,7 @@ function multiplyAll(...theArgs) {
     }
 
     let result = argumentsArray.reduce(function (previousValue, currentValue) {
-		return previousValue * currentValue;
+        return previousValue * currentValue;
     });
 
     return result;
@@ -133,7 +133,7 @@ const person = {
     address: {
         street: "Кутузовский проспект"
     }
-} 
+}
 	
 function getIn(obj, path, def) {
     let resultFor5task = [];
