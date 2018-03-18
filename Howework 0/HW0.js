@@ -60,7 +60,7 @@ function plus(...theArgs) {
         result += theArgs[i];
     }
 
-	return result;
+    return result;
 }
 
 	//2
@@ -69,18 +69,19 @@ function multiplyAll(...theArgs) {
 
     if ((theArgs.length % 2) != 0) {
 	    theArgs[theArgs.length] = 1;
+
 		for (let i = 0; i < theArgs.length; i = i + 2) {
 	        res *= multiply(theArgs[i], theArgs[i + 1]);
         }
 
         return res;
     } else {
-          for (let i = 0; i < theArgs.length; i = i + 2) {
-              res *= multiply(theArgs[i], theArgs[i + 1]);
-          }
+        for (let i = 0; i < theArgs.length; i = i + 2) {
+            res *= multiply(theArgs[i], theArgs[i + 1]);
+        }
 
-          return res;
-      }
+        return res;
+    }
 }
 
 	//2.2
@@ -95,7 +96,7 @@ function multiplyAll(...theArgs) {
 	    return previousValue * currentValue;
     });
 
-	return result;
+    return result;
 }
 
 	//3
@@ -109,43 +110,44 @@ const objectQueryStr = function (objectWithNames) {
         newQueryArray.push(objectWithNames[key]);
         newQueryArray.push('&');
     }
-	  
-	newQueryArray.pop();
-	newQueryArray = newQueryArray.join('');
-		
-	return encodeURI(newQueryArray);
+
+    newQueryArray.pop();
+    newQueryArray = newQueryArray.join('');
+
+    return encodeURI(newQueryArray);
 } 
 	
 	//4
 function ChoosePeople (people) {
     const result = arrayPeople.filter( function(elem) {
-	    if (elem.sex == "female") {
-		    return elem;
-		} 
+        if (elem.sex == "female") {
+            return elem;
+        }
     });
-	  
+
     return result;
 }	
 	
 	//5
 const person = { 
-    address: { 
-	    street: "Кутузовский проспект" 
-    } 
+    address: {
+        street: "Кутузовский проспект"
+    }
 } 
 	
 function getIn(obj, path, def) {
     let resultFor5task = [];
     resultFor5task = obj[path[0]];
-	  
-	for (i = 1; i < path.length; i++) {
-	    resultFor5task = resultFor5task[path[i]] 
-	}
-	  
-	if (resultFor5task == undefined) {
-	    return def;
-	}
-	return resultFor5task;
+
+    for (i = 1; i < path.length; i++) {
+        resultFor5task = resultFor5task[path[i]]
+    }
+
+    if (resultFor5task == undefined) {
+        return def;
+    }
+
+    return resultFor5task;
 }
 
 	//outputs
