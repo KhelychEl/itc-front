@@ -71,16 +71,16 @@ function multiplyAll(...theArgs) {
         theArgs[theArgs.length] = 1;
 
         for (let i = 0; i < theArgs.length; i = i + 2) {
-	        res *= multiply(theArgs[i], theArgs[i + 1]);
+            res *= multiply(theArgs[i], theArgs[i+1]);
         }
 
         return res;
     } else {
-		for (let i = 0; i < theArgs.length; i = i + 2) {
-		    res *= multiply(theArgs[i], theArgs[i + 1]);
-		}
+        for (let i = 0; i < theArgs.length; i = i + 2) {
+            res *= multiply(theArgs[i], theArgs[i+1]);
+        }
 
-		return res;
+        return res;
     }
 }
 
