@@ -1,151 +1,153 @@
 ﻿	//Main1
-	function plus1(number1, number2) {
-      return number1 + number2;
-	}
+function plus1(number1, number2) {
+    return number1 + number2;
+}
 	
 	//Main2
-	function multiply(number1, number2) {
-	  let result = 0;
-	 
-	  for (let i = 0; i < number1; i++) {
-	    result += plus1(number2, number2);
-	  }
-	 
-	  return result/2;
-	}
+function multiply(number1, number2) {
+    let result = 0;
+
+    for (let i = 0; i < number1; i++) {
+        result += plus1(number2, number2);
+    }
+
+    return result / 2;
+}
 	
 	//Main3
 	let array1 = [1,2,3]; 
 	let array2 = [4,5]; 
 	
-	function mergeArrays(array1, array2) {
-	  return array1.concat(array2); 		
-	} 
+function mergeArrays(array1, array2) {
+	    return array1.concat(array2);
+	}
 
 	//Main4
-	const arrayPeople = [
-	  { age : "18", sex : "female", favouriteFilm : "TheTime" },
-	  { age : "19", sex : "male", favouriteFilm : "GoodBoy"  },
-	  { age : "19", sex : "female", favouriteFilm : "WhoAmI" },
-	]
+const arrayPeople = [
+    { age: "18", sex: "female", favouriteFilm: "TheTime" },
+	{ age: "19", sex: "male", favouriteFilm: "GoodBoy" },
+	{ age: "19", sex: "female", favouriteFilm: "WhoAmI" },
+]
 	
-	function filterFemales(arrayPeople) { 
-	  for (let i = 0; i < arrayPeople.length; i++) { 
+function filterFemales(arrayPeople) {
+    for (let i = 0; i < arrayPeople.length; i++) {
         if (arrayPeople[i].sex == "female") {
-	      console.log(arrayPeople[i]);
-	    }
-	  } 
-	} 
+            console.log(arrayPeople[i]);
+        }
+    }
+}
 
 	//Main5
-	function getQuadrant(x, y) { 
-	  if ((x > 0) && (y > 0)) { 
-	    console.log("Quadrant is first"); 
-	  } else if ((x < 0) && (y < 0)) { 
-		  console.log("Quadrant is third"); 
-		} else if ((x < 0) && (y > 0)) { 
-		    console.log("Quadrant is second"); 
-		  }  else if ((x > 0) && (y < 0)) { 
-		       console.log("Quadrant is fourth"); 
-		     }  else {
-				  console.log("The point is on the coordinate line");
-			    } 
-	} 
+function getQuadrant(x, y) {
+    if ((x > 0) && (y > 0)) {
+        console.log("Quadrant is first");
+    } else if ((x < 0) && (y < 0)) {
+        console.log("Quadrant is third");
+    } else if ((x < 0) && (y > 0)) {
+        console.log("Quadrant is second");
+    } else if ((x > 0) && (y < 0)) {
+        console.log("Quadrant is fourth");
+    } else {
+        console.log("The point is on the coordinate line");
+    }
+}
 
 	//1
-	function plus(...theArgs) { 
-	  let result = 0; 
-	  
-	  for (let i = 0; i < theArgs.length; i++) { 
-	    result += theArgs[i]; 
-	  } 
-	  
-	  return result; 
-	} 
+function plus(...theArgs) {
+    let result = 0;
+
+	  for (let i = 0; i < theArgs.length; i++) {
+        result += theArgs[i];
+      }
+
+	return result;
+}
 
 	//2
-	function multiplyAll(...theArgs) { 
-	  let res = 1; 
-	  
-	  if ((theArgs.length % 2) != 0) { 
-	    theArgs[theArgs.length] = 1; 
-		for (let i = 0; i < theArgs.length; i = i + 2) { 
-		  res *= multiply(theArgs[i], theArgs[i + 1]); 
-		} 
-		
-			return res; 
-	  }  else { 
-		   for (let i = 0; i < theArgs.length; i = i + 2) { 
-		     res *= multiply(theArgs[i], theArgs[i + 1]); 
-		   } 
-		   
-			return res; 
-		 }   
-	} 
+function multiplyAll(...theArgs) {
+    let res = 1;
+
+    if ((theArgs.length % 2) != 0) {
+	    theArgs[theArgs.length] = 1;
+
+		for (let i = 0; i < theArgs.length; i = i + 2) {
+		  res *= multiply(theArgs[i], theArgs[i + 1]);
+        }
+
+		return res;
+    } else {
+	    for (let i = 0; i < theArgs.length; i = i + 2) {
+		     res *= multiply(theArgs[i], theArgs[i + 1]);
+        }
+
+		return res;
+     }
+}
 
 	//2.2
-	function multiplyAll(...theArgs) { 
-	  const argumentsArray = []; 
+function multiplyAll(...theArgs) {
+    const argumentsArray = [];
 
-	  for(let i = 0; i < theArgs.length; i++) { 
-			argumentsArray[i] = theArgs[i]; 
-	    } 
+    for (let i = 0; i < theArgs.length; i++) {
+	    argumentsArray[i] = theArgs[i];
+    }
 
-	  let result = argumentsArray.reduce(function(previousValue, currentValue) { 
-	    return previousValue * currentValue; 
-	  }); 
+	let result = argumentsArray.reduce(function (previousValue, currentValue) {
+	    return previousValue * currentValue;
+    });
 
-		return result; 
-	} 
+	return result;
+}
 
 	//3
-	const objectQueryStr = function (objectWithNames) { 
-	  let newQueryArray = []; 
-	  newQueryArray.push('?');	
-	 
-	  for (key in objectWithNames) { 
-	    newQueryArray.push(key); 
-		newQueryArray.push('='); 
-		newQueryArray.push(objectWithNames[key]); 
-		newQueryArray.push('&'); 
-	  } 
+const objectQueryStr = function (objectWithNames) { 
+    let newQueryArray = [];
+    newQueryArray.push('?');
+
+    for (key in objectWithNames) {
+        newQueryArray.push(key);
+        newQueryArray.push('=');
+        newQueryArray.push(objectWithNames[key]);
+        newQueryArray.push('&');
+    }
 	  
-		newQueryArray.pop();
-		newQueryArray = newQueryArray.join('');
+	newQueryArray.pop();
+	newQueryArray = newQueryArray.join('');
 		
-	  return encodeURI(newQueryArray);
-	} 
+	return encodeURI(newQueryArray);
+} 
 	
 	//4
-	function ChoosePeople (people) {
-	  const result = arrayPeople.filter( function(elem) {
+function ChoosePeople (people) {
+    const result = arrayPeople.filter( function(elem) {
 	    if (elem.sex == "female") {
-		  return elem;
+		    return elem;
 		} 
-	  });
+    });
 	  
-	  return result;
-	}	
+    return result;
+}	
 	
 	//5
-	const person = { 
-	  address: { 
+const person = { 
+    address: { 
 	    street: "Кутузовский проспект" 
-	  } 
-	} 
+    } 
+} 
 	
-	function getIn(obj, path, def) {
-	  let resultFor5task = [];
-	  resultFor5task = obj[path[0]]; 
+function getIn(obj, path, def) {
+    let resultFor5task = [];
+    resultFor5task = obj[path[0]];
 	  
-	  for (i = 1; i < path.length; i++) {
+	for (i = 1; i < path.length; i++) {
 	    resultFor5task = resultFor5task[path[i]] 
-	  }
-	  
-	  if (resultFor5task == undefined) 
-	  return def; 
-	  return resultFor5task; 
 	}
+	  
+	if (resultFor5task == undefined) {
+	    return def;
+	}
+	return resultFor5task;
+}
 
 	//outputs
 	console.log('outputTask1 = ' + plus1(5,4));
