@@ -89,7 +89,7 @@ function multiplyAll(...theArgs) {
     const argumentsArray = [];
 
     for (let i = 0; i < theArgs.length; i++) {
-	    argumentsArray[i] = theArgs[i];
+        argumentsArray[i] = theArgs[i];
     }
 
     let result = argumentsArray.reduce(function (previousValue, currentValue) {
