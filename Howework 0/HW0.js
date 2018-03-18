@@ -19,8 +19,8 @@ let array1 = [1, 2, 3];
 let array2 = [4,5]; 
 	
 function mergeArrays(array1, array2) {
-	    return array1.concat(array2);
-	}
+    return array1.concat(array2);
+}
 
 	//Main4
 const arrayPeople = [
@@ -56,9 +56,9 @@ function getQuadrant(x, y) {
 function plus(...theArgs) {
     let result = 0;
 
-	  for (let i = 0; i < theArgs.length; i++) {
+    for (let i = 0; i < theArgs.length; i++) {
         result += theArgs[i];
-      }
+    }
 
 	return result;
 }
@@ -69,19 +69,18 @@ function multiplyAll(...theArgs) {
 
     if ((theArgs.length % 2) != 0) {
 	    theArgs[theArgs.length] = 1;
-
 		for (let i = 0; i < theArgs.length; i = i + 2) {
-		  res *= multiply(theArgs[i], theArgs[i + 1]);
+	        res *= multiply(theArgs[i], theArgs[i + 1]);
         }
 
-		return res;
+        return res;
     } else {
-	    for (let i = 0; i < theArgs.length; i = i + 2) {
-		     res *= multiply(theArgs[i], theArgs[i + 1]);
-        }
+          for (let i = 0; i < theArgs.length; i = i + 2) {
+              res *= multiply(theArgs[i], theArgs[i + 1]);
+          }
 
-		return res;
-     }
+          return res;
+      }
 }
 
 	//2.2
@@ -92,7 +91,7 @@ function multiplyAll(...theArgs) {
 	    argumentsArray[i] = theArgs[i];
     }
 
-	let result = argumentsArray.reduce(function (previousValue, currentValue) {
+    let result = argumentsArray.reduce(function (previousValue, currentValue) {
 	    return previousValue * currentValue;
     });
 
