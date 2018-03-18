@@ -1,9 +1,9 @@
-﻿	//Main1
+﻿    //Main1
 function plus1(number1, number2) {
     return number1 + number2;
 }
 	
-	//Main2
+    //Main2
 function multiply(number1, number2) {
     let result = 0;
 
@@ -14,7 +14,7 @@ function multiply(number1, number2) {
     return result / 2;
 }
 	
-//Main3
+    //Main3
 let array1 = [1, 2, 3];
 let array2 = [4,5]; 
 	
@@ -22,11 +22,11 @@ function mergeArrays(array1, array2) {
     return array1.concat(array2);
 }
 
-	//Main4
+    //Main4
 const arrayPeople = [
     { age: "18", sex: "female", favouriteFilm: "TheTime" },
-	{ age: "19", sex: "male", favouriteFilm: "GoodBoy" },
-	{ age: "19", sex: "female", favouriteFilm: "WhoAmI" },
+    { age: "19", sex: "male", favouriteFilm: "GoodBoy" },
+    { age: "19", sex: "female", favouriteFilm: "WhoAmI" },
 ]
 	
 function filterFemales(arrayPeople) {
@@ -37,7 +37,7 @@ function filterFemales(arrayPeople) {
     }
 }
 
-	//Main5
+    //Main5
 function getQuadrant(x, y) {
     if ((x > 0) && (y > 0)) {
         console.log("Quadrant is first");
@@ -52,7 +52,7 @@ function getQuadrant(x, y) {
     }
 }
 
-	//1
+    //1
 function plus(...theArgs) {
     let result = 0;
 
@@ -63,28 +63,28 @@ function plus(...theArgs) {
     return result;
 }
 
-	//2
+    //2
 function multiplyAll(...theArgs) {
     let res = 1;
 
     if ((theArgs.length % 2) != 0) {
-	    theArgs[theArgs.length] = 1;
+        theArgs[theArgs.length] = 1;
 
-		for (let i = 0; i < theArgs.length; i = i + 2) {
+        for (let i = 0; i < theArgs.length; i = i + 2) {
 	        res *= multiply(theArgs[i], theArgs[i + 1]);
         }
 
         return res;
     } else {
-        for (let i = 0; i < theArgs.length; i = i + 2) {
-            res *= multiply(theArgs[i], theArgs[i + 1]);
-        }
+		for (let i = 0; i < theArgs.length; i = i + 2) {
+		    res *= multiply(theArgs[i], theArgs[i + 1]);
+		}
 
-        return res;
+		return res;
     }
 }
 
-	//2.2
+    //2.2
 function multiplyAll(...theArgs) {
     const argumentsArray = [];
 
@@ -93,13 +93,13 @@ function multiplyAll(...theArgs) {
     }
 
     let result = argumentsArray.reduce(function (previousValue, currentValue) {
-	    return previousValue * currentValue;
+		return previousValue * currentValue;
     });
 
     return result;
 }
 
-	//3
+    //3
 const objectQueryStr = function (objectWithNames) { 
     let newQueryArray = [];
     newQueryArray.push('?');
@@ -117,7 +117,7 @@ const objectQueryStr = function (objectWithNames) {
     return encodeURI(newQueryArray);
 } 
 	
-	//4
+    //4
 function ChoosePeople (people) {
     const result = arrayPeople.filter( function(elem) {
         if (elem.sex == "female") {
@@ -128,7 +128,7 @@ function ChoosePeople (people) {
     return result;
 }	
 	
-	//5
+    //5
 const person = { 
     address: {
         street: "Кутузовский проспект"
@@ -150,7 +150,7 @@ function getIn(obj, path, def) {
     return resultFor5task;
 }
 
-	//outputs
+    //outputs
 console.log('outputTask1 = ' + plus1(5,4));
 console.log('outputTask2 = ' + multiply(3, 10));
 console.log('outputTask3 : '); console.log(mergeArrays(array1, array2));
