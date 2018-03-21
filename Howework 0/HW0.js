@@ -92,11 +92,10 @@ function multiplyAll(...theArgs) {
         argumentsArray[i] = theArgs[i];
     }
 
-    let result = argumentsArray.reduce(function (previousValue, currentValue) {
+    return argumentsArray.reduce(function (previousValue, currentValue) {
         return previousValue * currentValue;
     });
 
-    return result;
 }
 
     //3
