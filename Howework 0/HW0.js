@@ -114,7 +114,7 @@ const objectQueryStr = function (objectWithNames) {
 	
     //4
 function choosePeople (people) {
-    return arrayPeople.filter( function(elem) {
+    return arrayPeople.filter(function(elem) {
         if (elem.sex == "female") {
             return elem;
         }
@@ -148,14 +148,12 @@ console.log('outputTask1 = ' + plus1(5,4));
 console.log('outputTask2 = ' + multiply(3, 10));
 console.log('outputTask3 : '); console.log(mergeArrays([1,2,3], [4,5]));
 console.log('outputTask4 : '); filterFemales(arrayPeople);
-{
 console.log('outputTask5 : ');
 getQuadrant(1, 2); 
 getQuadrant(-1, 2); 
 getQuadrant(-2, -3); 
 getQuadrant(4, -7); 
 getQuadrant(0, 0);
-}
 console.log('outputTask1 = ' + plus(2, 3, 5, 7, 3));
 console.log('outputTask2.1 = ' + multiplyAll(2, 3, 1, 7, 8));
 console.log('outputTask2.2 = ' + multiplyAll(2, 3, 1, 7, 8));
